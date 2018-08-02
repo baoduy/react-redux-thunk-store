@@ -4,7 +4,7 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 
-export default function configureStore(rootReducer, initialState, middleWares) {
+export default function configureStore(rootReducer, initialState={}, middleWares=[]) {
     return createStore(
         rootReducer,
         initialState,
