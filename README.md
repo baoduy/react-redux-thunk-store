@@ -1,5 +1,6 @@
 # React Redux Thunk Store
 
+[![CircleCI](https://circleci.com/gh/baoduy/react-redux-thunk-store.svg?style=svg)](https://circleci.com/gh/baoduy/react-redux-thunk-store)
 [![codecov](https://codecov.io/gh/baoduy/Js-Projects/branch/master/graph/badge.svg)](https://codecov.io/gh/baoduy/Js-Projects)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-redux-thunk-store.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/react-redux-thunk-store.svg)
