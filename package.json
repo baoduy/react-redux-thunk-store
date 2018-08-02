@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baoduy/Js-Projects.git"
+    "url": "git+https://github.com/baoduy/react-redux-thunk-store.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "Duy Hoang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baoduy/Js-Projects/issues"
+    "url": "https://github.com/baoduy/react-redux-thunk-store/issues"
   },
-  "homepage": "https://github.com/baoduy/Js-Projects#readme",
+  "homepage": "https://github.com/baoduy/react-redux-thunk-store#readme",
   "peerdependencies": {
     "babel-runtime": "^6.26.0",
     "react": "^16.4.1",
