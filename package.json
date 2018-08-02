@@ -10,7 +10,7 @@
     "clean": "rimraf {lib,dist,tmp}/*",
     "git:jest": "git submodule update --init --remote configs/jest",
     "test": "npm-run-all git:jest && jest --watch --coverage --config=configs/jest/jest.json",
-    "test:ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/jest.json && codecov -t bd85f2ef-2c55-46af-bad5-560a2b92dbd5"
+    "test:ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/jest.json && codecov -t 34248b68-2f12-4523-8a32-c2dfa25ec239"
   },
   "repository": {
     "type": "git",
