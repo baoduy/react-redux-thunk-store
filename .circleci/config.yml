@@ -36,8 +36,6 @@ jobs:
       
       # Build
       - run: npm run build
-      # lint
-      - run: npm run lint
       # run tests!
       - run: npm run test-ci
 
