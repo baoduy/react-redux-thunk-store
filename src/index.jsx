@@ -13,8 +13,8 @@ const ReactReduxThunkStore = ({
   const rootReducer = combineReducers(reducers);
   const store = configureStore(
     rootReducer,
-    initialState || {},
-    middleWares || []
+    initialState,
+    middleWares
   );
   return <Provider store={store} {...others} />;
 };
