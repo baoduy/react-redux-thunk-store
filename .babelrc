@@ -1,0 +1,21 @@
+{
+    "presets": [
+        "env",
+        "react-latest",
+        "stage-3"
+    ],
+    "plugins": [
+        ["transform-runtime", {
+            "helpers": true,
+            "polyfill": true,
+            "regenerator": true,
+            "moduleName": "babel-runtime"
+        }],
+        "babel-plugin-transform-async-to-generator", [
+            "module-resolver",
+            {
+                "root": ["./src"]
+            }
+        ]
+    ]
+}

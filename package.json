@@ -1,0 +1,60 @@
+{
+  "name": "react-redux-thunk-store",
+  "version": "0.0.7",
+  "description": "The helper compoment to create the redux store automatically.",
+  "main": "lib/index.js",
+  "scripts": {
+    "all": "npm run build && npm run test:ci",
+    "build": "npm run clean && npm run build:lib",
+    "build:lib": "babel src --out-dir lib --ignore tests",
+    "clean": "rimraf {lib,dist,tmp}/*",
+    "test": "jest --watch --coverage --config=tests/jest.json",
+    "test-ci": "jest --ci --coverage --config=tests/jest.json && codecov -t bd85f2ef-2c55-46af-bad5-560a2b92dbd5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baoduy/Js-Projects.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "thunk",
+    "store"
+  ],
+  "author": "Duy Hoang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baoduy/Js-Projects/issues"
+  },
+  "homepage": "https://github.com/baoduy/Js-Projects#readme",
+  "peerdependencies": {
+    "babel-runtime": "^6.26.0",
+    "react": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.2.0",
+    "babel-loader": "7.1.5",
+    "babel-plugin-module-resolver": "3.1.1",
+    "babel-plugin-transform-async-to-generator": "6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-latest": "6.1.0",
+    "babel-preset-stage-3": "6.24.1",
+    "cross-env": "^5.2.0",
+    "jest": "^23.3.0",
+    "react-test-renderer": "^16.4.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-immutable-state-invariant": "^2.1.0"
+  },
+  "jest": {
+    "coverageDirectory": "<rootDir>/tests/__coverage__/",
+    "collectCoverage": true
+  }
+}
