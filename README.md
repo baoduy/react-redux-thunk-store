@@ -18,6 +18,7 @@ import Provider from "react-redux-thunk-store";
 import ReactDOM from "ReactDOM";
 
 const reducer = (store = [], action) => {
+  //This is sample reducer
   if (action.type === "LOADDED") return [{ id: 1 }];
   return store;
 };
