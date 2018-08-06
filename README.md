@@ -22,14 +22,14 @@ const reducer = (store = [], action) => {
   return store;
 };
 
-const component = renderer.create(
-  <Provider reducers={{ value: reducer }}>
-    <div>Hello Store</div>
-  </Provider>
-);
+const rootRecuders ={
+  values:reducer,
+  others:otherReducer,
+  ...
+}
 
 ReactDOM.render(
-  <Provider reducers={{ value: reducer }}>
+  <Provider reducers={rootRecuders}>
     <div>Hello Store</div>
   </Provider>,
   document.getElementById("root")
