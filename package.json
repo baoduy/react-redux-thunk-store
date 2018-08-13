@@ -4,6 +4,7 @@
   "description": "The helper compoment to create the redux store automatically.",
   "main": "lib/index.js",
   "scripts": {
+    "install-all": "npm install -g npm-install-peers && npm-install-peers && npm install",
     "all": "npm run build && npm run test:ci",
     "build": "npm run clean && npm run build:lib",
     "build:lib": "babel src --out-dir lib --ignore tests",
@@ -28,7 +29,7 @@
     "url": "https://github.com/baoduy/react-redux-thunk-store/issues"
   },
   "homepage": "https://github.com/baoduy/react-redux-thunk-store#readme",
-  "dependencies": {
+  "peerDependencies": {
     "babel-runtime": "^6.26.0",
     "react": "^16.4.1",
     "react-redux": "^5.0.7",
