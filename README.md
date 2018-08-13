@@ -6,6 +6,9 @@
 ![npm (scoped)](https://img.shields.io/npm/v/react-redux-thunk-store.svg)
 ![npm](https://img.shields.io/npm/l/react-redux-thunk-store.svg)
 [![Open Source Helpers](https://www.codetriage.com/baoduy/react-redux-thunk-store/badges/users.svg)](https://www.codetriage.com/baoduy/react-redux-thunk-store)
+[![PeerDependencies](https://img.shields.io/david/peer/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store?type=peer)
+[![Dependencies](https://img.shields.io/david/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store)
+[![DevDependencies](https://img.shields.io/david/dev/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store?type=develop)
 
 To simplyfi the **redux store** creattion and management. I developed this library to help to create and manage the store easier and simpler.
 
