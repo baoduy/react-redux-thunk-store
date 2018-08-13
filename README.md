@@ -5,6 +5,7 @@
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-redux-thunk-store.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/react-redux-thunk-store.svg)
 ![npm](https://img.shields.io/npm/l/react-redux-thunk-store.svg)
+[![Open Source Helpers](https://www.codetriage.com/baoduy/react-redux-thunk-store/badges/users.svg)](https://www.codetriage.com/baoduy/react-redux-thunk-store)
 
 To simplyfi the **redux store** creattion and management. I developed this library to help to create and manage the store easier and simpler.
 
