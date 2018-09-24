@@ -1,6 +1,6 @@
 {
   "name": "react-redux-thunk-store",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "The component that help to simplify the way to create the redux store automatically.",
   "main": "lib/index.js",
   "scripts": {
@@ -37,16 +37,16 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-json-strings": "7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/plugin-transform-async-to-generator": "^7.0.0",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-json-strings": "latest",
+    "@babel/plugin-syntax-dynamic-import": "latest",
+    "@babel/plugin-syntax-import-meta": "latest",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
     "@babel/plugin-transform-modules-commonjs": "^7.0.0-rc.1",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
