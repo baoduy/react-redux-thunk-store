@@ -41,6 +41,31 @@ ReactDOM.render(
 );
 ```
 
+## NextJs Support
+
+Beow is the sample code if you using NextJs.
+
+```javascript
+import withRedux from 'next-redux-wrapper';
+import createStore from 'react-redux-thunk-store/storeCreator';
+//Using the react-redux Provider
+import { Provider } from 'react-redux';
+//Your reducers but not combineReducers
+import reducers from './reducers';
+
+const makeStore = () => createStore(reducers, initialState);
+
+export default withRedux(makeStore)(
+  class extends App {
+    render() {
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>;
+    }
+  }
+);
+```
+
 ## Properties
 
 ### 1. reducers `Required`

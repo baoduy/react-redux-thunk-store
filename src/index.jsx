@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Provider } from "react-redux";
-import configureStore from "./store";
-import { combineReducers } from "redux";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Provider } from 'react-redux';
+import storeCreator from './storeCreator';
 
 const ReactReduxThunkStore = ({
   reducers,
@@ -10,12 +9,7 @@ const ReactReduxThunkStore = ({
   middleWares,
   ...others
 }) => {
-  const rootReducer = combineReducers(reducers);
-  const store = configureStore(
-    rootReducer,
-    initialState,
-    middleWares
-  );
+  const store = storeCreator({ reducers, initialState, middleWares });
   return <Provider store={store} {...others} />;
 };
 
