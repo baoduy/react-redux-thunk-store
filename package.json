@@ -1,16 +1,17 @@
 {
   "name": "react-redux-thunk-store",
-  "version": "0.0.7",
-  "description": "The helper compoment to create the redux store automatically.",
+  "version": "0.0.8",
+  "description": "The component that help to simplify the way to create the redux store automatically.",
   "main": "lib/index.js",
   "scripts": {
     "all": "npm run build && npm run test:ci",
-    "build": "npm run clean && npm run build:lib",
+    "build": "npm run clean && npm run build:lib && npm run test-bundle",
     "build:lib": "babel src --out-dir lib --ignore tests",
     "clean": "rimraf {lib,dist,tmp}/*",
     "git:jest": "git submodule update --init --remote configs/jest",
+    "test-bundle": "bundlesize",
     "test": "npm-run-all git:jest && jest --watch --coverage --config=configs/jest/jest.json",
-    "test:ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/jest.json && codecov -t bd85f2ef-2c55-46af-bad5-560a2b92dbd5"
+    "test:ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/jest.json && codecov -t 34248b68-2f12-4523-8a32-c2dfa25ec239"
   },
   "repository": {
     "type": "git",
@@ -29,24 +30,29 @@
   },
   "homepage": "https://github.com/baoduy/react-redux-thunk-store#readme",
   "dependencies": {
-    "babel-runtime": "^6.26.0",
+    "@babel/runtime": "^7.0.0-rc.1",
     "react": "^16.4.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-core": "6.26.3",
-    "babel-eslint": "^8.2.5",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-json-strings": "latest",
+    "@babel/plugin-syntax-dynamic-import": "latest",
+    "@babel/plugin-syntax-import-meta": "latest",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-rc.1",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^23.2.0",
     "babel-plugin-module-resolver": "3.1.1",
-    "babel-plugin-transform-async-to-generator": "6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-react-latest": "6.1.0",
-    "babel-preset-stage-3": "6.24.1",
+    "bundlesize": "^0.17.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
@@ -62,5 +68,12 @@
   "jest": {
     "coverageDirectory": "<rootDir>/tests/__coverage__/",
     "collectCoverage": true
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./lib/*.js",
+      "compression": "gzip",
+      "maxSize": "1 kB"
+    }
+  ]
 }

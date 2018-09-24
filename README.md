@@ -1,10 +1,14 @@
 # React Redux Thunk Store
 
-[![codecov](https://codecov.io/gh/baoduy/Js-Projects/branch/master/graph/badge.svg)](https://codecov.io/gh/baoduy/Js-Projects)
+[![CircleCI](https://circleci.com/gh/baoduy/react-redux-thunk-store.svg?style=svg)](https://circleci.com/gh/baoduy/react-redux-thunk-store)
+[![codecov](https://codecov.io/gh/baoduy/react-redux-thunk-store/branch/develop/graph/badge.svg)](https://codecov.io/gh/baoduy/react-redux-thunk-store)
 ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-redux-thunk-store.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/react-redux-thunk-store.svg)
 ![npm](https://img.shields.io/npm/l/react-redux-thunk-store.svg)
-
+[![Open Source Helpers](https://www.codetriage.com/baoduy/react-redux-thunk-store/badges/users.svg)](https://www.codetriage.com/baoduy/react-redux-thunk-store)
+[![PeerDependencies](https://img.shields.io/david/peer/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store?type=peer)
+[![Dependencies](https://img.shields.io/david/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store)
+[![DevDependencies](https://img.shields.io/david/dev/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store?type=develop)
 
 To simplyfi the **redux store** creattion and management. I developed this library to help to create and manage the store easier and simpler.
 
@@ -18,21 +22,47 @@ import Provider from "react-redux-thunk-store";
 import ReactDOM from "ReactDOM";
 
 const reducer = (store = [], action) => {
+  //This is sample reducer
   if (action.type === "LOADDED") return [{ id: 1 }];
   return store;
 };
 
-const component = renderer.create(
-  <Provider reducers={{ value: reducer }}>
-    <div>Hello Store</div>
-  </Provider>
-);
+const rootRecuders ={
+  values:reducer,
+  others:otherReducer,
+  ...
+}
 
 ReactDOM.render(
-  <Provider reducers={{ value: reducer }}>
+  <Provider reducers={rootRecuders}>
     <div>Hello Store</div>
   </Provider>,
   document.getElementById("root")
+);
+```
+
+## NextJs Support
+
+Beow is the sample code if you using NextJs.
+
+```javascript
+import withRedux from 'next-redux-wrapper';
+import createStore from 'react-redux-thunk-store/storeCreator';
+//Using the react-redux Provider
+import { Provider } from 'react-redux';
+//Your reducers but not combineReducers
+import reducers from './reducers';
+
+const makeStore = () => createStore(reducers, initialState);
+
+export default withRedux(makeStore)(
+  class extends App {
+    render() {
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>;
+    }
+  }
 );
 ```
 
