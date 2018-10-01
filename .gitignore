@@ -331,6 +331,7 @@ ASALocalRun/
 
 .idea/
 dist/
+lib/
 node_modules/
 tests/__coverage__/
 package-lock.json
