@@ -1,22 +1,39 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import Provider from "../lib";
+import Provider from '../lib';
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import renderer from 'react-test-renderer';
+
+let called = false;
+
+const action = () => d => {
+  called = true;
+  d({ type: 'LOADDED' });
+};
 
 const reducer = (store = [], action) => {
-  if (action.type === "LOADDED") return [{ id: 1 }];
+  if (action.type === 'LOADDED') return [{ id: 1 }];
   return store;
 };
 
+const Comsumer = connect(
+  s => ({ value: s }),
+  d => ({
+    action: bindActionCreators(action, d)
+  })
+)(props => {
+  if (!called) props.action();
+  console.log(props.value);
+  return <div>{props.value && props.value[0]}</div>;
+});
+
 const component = renderer.create(
   <Provider reducers={{ value: reducer }}>
-    <div>Hello Store for PRD</div>
+    <Comsumer />
   </Provider>
 );
 
-it("can render without issues in DEV", () => {
-  console.debug("NODE_ENV", process.env.NODE_ENV);
+it('can render without issues in DEV', () => {
   const cs = component.toJSON();
-  console.debug(cs);
-
   expect(cs).toMatchSnapshot();
 });
