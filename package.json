@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "all": "npm run build && npm run test:ci",
-    "build": "npm run clean && npm run build:lib && npm run test-bundle",
-    "build:lib": "babel src --out-dir lib --ignore tests",
+    "build": "npm run clean && npm run build-lib && npm run test-bundle",
+    "build-lib": "babel src --out-dir lib --ignore tests",
     "clean": "rimraf {lib,dist,tmp}/*",
     "git:jest": "git submodule update --init --remote configs/jest",
     "test-bundle": "bundlesize",
