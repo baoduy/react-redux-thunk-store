@@ -1,4 +1,4 @@
-import Provider, { storeCreator } from '../src';
+import Provider, { storeCreator } from '../lib';
 
 import React from 'react';
 import { bindActionCreators } from 'redux';

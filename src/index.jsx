@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import React from 'react';
-
-export { default as storeCreator } from './storeCreator';
+import storeCreator from './storeCreator';
 
 const ReactReduxThunkStore = ({
   reducers,
@@ -26,4 +25,5 @@ ReactReduxThunkStore.propTypes = {
   children: PropTypes.node.isRequired
 };
 
+export { storeCreator };
 export default ReactReduxThunkStore;
