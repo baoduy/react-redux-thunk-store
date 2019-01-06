@@ -1,6 +1,6 @@
 {
   "name": "react-redux-thunk-store",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "The component that help to simplify the way to create the redux store automatically.",
   "main": "lib/index.js",
   "scripts": {
