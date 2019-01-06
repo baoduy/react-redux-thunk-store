@@ -35,11 +35,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # Build
-      - run: npm run build
-      # run tests!
-      - run: npm run test:ci
+      - run: npm run build && npm run test-ci
       - deploy:
-        command: |
-          if [ "${CIRCLE_BRANCH}" == "master" ]; then
-            npm run ci-publish || true
-          fi
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npm run ci-publish || true
+            fi
