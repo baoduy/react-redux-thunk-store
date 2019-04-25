@@ -14,6 +14,12 @@ To simplyfi the **redux store** creattion and management. I developed this libra
 
 It fully compatible with **redux tool for Chrome** to monitor the state in DEVELOPMENT mode.
 
+## Installation
+```cmd
+mpn install --save-dev  redux-devtools-extension redux-immutable-state-invariant
+npm install --save-dev react-redux-thunk-store
+```
+
 ## Sample:
 
 ```javascript

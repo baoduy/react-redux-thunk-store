@@ -1,8 +1,5 @@
 {
-  "presets": [
-    "@babel/env",
-    "@babel/react"
-  ],
+  "presets": ["@babel/env", "@babel/react", "@babel/preset-typescript"],
   "plugins": [
     [
       "@babel/transform-runtime",
@@ -23,38 +20,29 @@
     [
       "module-resolver",
       {
-        "root": [
-          "./src"
-        ]
+        "root": ["./src"]
       }
     ]
   ],
   "env": {
     "node": {
-      "plugins": [
-        [
-          "@babel/transform-runtime"
-        ],
-        [
-          "@babel/plugin-transform-modules-commonjs",
-          {
-            "spec": true
-          }
-        ]
-      ]
+      "presets": [
+        ["@babel/preset-env", { "modules": "commonjs" }],
+        "@babel/react"
+      ],
+      "plugins": ["@babel/transform-modules-commonjs"]
     },
     "test": {
-      "plugins": [
+      "presets": [
         [
-          "@babel/transform-runtime"
-        ],
-        [
-          "@babel/plugin-transform-modules-commonjs",
+          "@babel/preset-env",
           {
-            "spec": true
+            "modules": "commonjs"
           }
-        ]
-      ]
+        ],
+        "@babel/react"
+      ],
+      "plugins": ["@babel/transform-modules-commonjs"]
     }
   }
 }

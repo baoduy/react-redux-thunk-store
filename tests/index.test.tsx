@@ -1,9 +1,10 @@
-import Provider, { storeCreator } from '../lib';
+import * as React from 'react';
 
-import React from 'react';
+import Provider, { storeCreator } from '../src';
+
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import renderer from 'react-test-renderer';
+import { create } from 'react-test-renderer';
 
 let called = false;
 
@@ -22,23 +23,25 @@ const Comsumer = connect(
   d => ({
     action: bindActionCreators(action, d)
   })
-)(props => {
+)((props: any) => {
   if (!called) props.action();
   console.log(props.value);
   return <div>{props.value && props.value[0]}</div>;
 });
 
-const component = renderer.create(
+const component = create(
   <Provider reducers={{ value: reducer }}>
     <Comsumer />
   </Provider>
 );
 
-test('can render without issues in DEV', () => {
-  const cs = component.toJSON();
-  expect(cs).toMatchSnapshot();
-});
+describe('Test Code in SRC folder', () => {
+  test('can render without issues in DEV', () => {
+    const cs = component.toJSON();
+    expect(cs).toMatchSnapshot();
+  });
 
-test('storeCreator is defined', () => {
-  expect(storeCreator).toBeDefined();
+  test('storeCreator is defined', () => {
+    expect(storeCreator).toBeDefined();
+  });
 });
