@@ -12,7 +12,7 @@
     "git:jest": "git submodule update --init --remote configs/jest",
     "test-bundle": "bundlesize",
     "test": "jest --watch --coverage --config=configs/jest/ts.jest.json",
-    "test-ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/jest.json && codecov",
+    "test-ci": "npm-run-all git:jest && jest --ci --coverage --config=configs/jest/ts.jest.json && codecov",
     "update": "ncu -u -a",
     "ci-publish": "ci-publish"
   },
