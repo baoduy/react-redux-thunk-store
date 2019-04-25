@@ -2,5 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "commonjs"
-  }
+  },
+  "declaration": false,
+  "composite": false,
+  "emitDeclarationOnly": false
 }
