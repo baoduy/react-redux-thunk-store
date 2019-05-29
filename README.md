@@ -1,8 +1,9 @@
 # React Redux Thunk Store
 
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-redux-thunk-store.svg)
+![publishsize](https://badgen.net/packagephobia/publish/webpack)
 [![CircleCI](https://circleci.com/gh/baoduy/react-redux-thunk-store.svg?style=svg)](https://circleci.com/gh/baoduy/react-redux-thunk-store)
 [![codecov](https://codecov.io/gh/baoduy/react-redux-thunk-store/branch/develop/graph/badge.svg)](https://codecov.io/gh/baoduy/react-redux-thunk-store)
-![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react-redux-thunk-store.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/react-redux-thunk-store.svg)
 ![npm](https://img.shields.io/npm/l/react-redux-thunk-store.svg)
 [![Open Source Helpers](https://www.codetriage.com/baoduy/react-redux-thunk-store/badges/users.svg)](https://www.codetriage.com/baoduy/react-redux-thunk-store)
