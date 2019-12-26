@@ -11,7 +11,7 @@
 [![Dependencies](https://img.shields.io/david/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store)
 [![DevDependencies](https://img.shields.io/david/dev/baoduy/react-redux-thunk-store.svg)](https://david-dm.org/baoduy/react-redux-thunk-store?type=develop)
 
-**Archived as the [reduxjs / redux-toolkit](https://github.com/reduxjs/redux-toolkit) **
+**Archived as the [reduxjs / redux-toolkit](https://github.com/reduxjs/redux-toolkit)**
 
 To simplyfy the **redux store** creattion and management. I developed this library to help to create and manage the store easier and simpler.
 
